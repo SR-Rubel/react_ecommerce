@@ -52,6 +52,24 @@ function Sidebar() {
                     Categories
                     </p>
                 </Link>
+                <Link to="/sub-categories" className="nav-link">
+                    <i className="nav-icon fas fa-th" />
+                    <p>
+                    Sub Categories
+                    </p>
+                </Link>
+                <Link to="/products" className="nav-link">
+                    <i className="nav-icon fas fa-th" />
+                    <p>
+                    Products
+                    </p>
+                </Link>
+                <Link to="/brand" className="nav-link">
+                    <i className="nav-icon fas fa-th" />
+                    <p>
+                    Brand
+                    </p>
+                </Link>
                 </li>
                 
             </ul>

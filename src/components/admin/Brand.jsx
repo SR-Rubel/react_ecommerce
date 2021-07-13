@@ -1,18 +1,47 @@
 import React from 'react'
+import Modal from './Modal'
 
-function Datatable() {
+function Brand() {
     return (
     <div>
     <section className="content-header">
         <div className="container-fluid">
         <div className="row mb-2">
             <div className="col-sm-6">
-            <h1>Categories</h1>
+            <h1>Brands</h1>
             </div>
             <div className="col-sm-6">
                 <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#modal-default">
                     Add New
                 </button>
+                
+{/* ================modal=================================== */}
+                <div className="modal fade" id="modal-default">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                        
+
+                        <div className="card card-primary">
+                            <div className="card-header">
+                                <h3 className="card-title">Add Brand</h3>
+                            </div>
+                            <form>
+                                <div className="card-body">
+                                    <div className="form-group">
+                                        <label htmlFor="exampleInputEmail1">Brand Name</label>
+                                        <input type="text" className="form-control" placeholder="name" />
+                                    </div>
+                                </div>
+                                <div className="card-footer">
+                                <button type="submit" className="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{/* ================modal=================================== */}
+
             </div>
         </div>
         </div>
@@ -83,4 +112,4 @@ function Datatable() {
     )
 }
 
-export default Datatable
+export default Brand

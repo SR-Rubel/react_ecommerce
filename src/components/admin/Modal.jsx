@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Modal() {
+function Modal({details,field,id}) {
     return (
         <div>
 
@@ -12,12 +12,12 @@ function Modal() {
 
                   <div className="card card-primary">
                     <div className="card-header">
-                        <h3 className="card-title">Add New Cartegory</h3>
+                        <h3 className="card-title">{details}</h3>
                     </div>
                     <form>
                         <div className="card-body">
                             <div className="form-group">
-                                <label htmlFor="exampleInputEmail1">Category Name</label>
+                                <label htmlFor="exampleInputEmail1">{field}</label>
                                 <input type="text" className="form-control" placeholder="name" />
                             </div>
                         </div>

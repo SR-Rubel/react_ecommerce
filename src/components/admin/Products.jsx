@@ -1,19 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Modal from './Modal'
 
-function Datatable() {
+function Products() {
     return (
     <div>
     <section className="content-header">
         <div className="container-fluid">
         <div className="row mb-2">
             <div className="col-sm-6">
-            <h1>Categories</h1>
+            <h1>Products</h1>
             </div>
             <div className="col-sm-6">
                 <button type="button" className="btn btn-danger" data-toggle="modal" data-target="#modal-default">
-                    Add New
+                    <Link to="/add-product">Add Product</Link>
                 </button>
-                
+
             </div>
         </div>
         </div>
@@ -25,7 +27,7 @@ function Datatable() {
             <div className="col-12">
             <div className="card">
                 <div className="card-header">
-                <h3 className="card-title">DataTable with minimal features &amp; hover style</h3>
+                    Products list
                 </div>
                 {/* /.card-header */}
                 <div className="card-body">
@@ -84,4 +86,4 @@ function Datatable() {
     )
 }
 
-export default Datatable
+export default Products

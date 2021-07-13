@@ -7,7 +7,7 @@ function AddProduct() {
         {/* SELECT2 EXAMPLE */}
         <div className="card card-default">
         <div className="card-header">
-            <h3 className="card-title">Select2 (Default Theme)</h3>
+            <h3 className="card-title">Add Product</h3>
             <div className="card-tools">
             <button type="button" className="btn btn-tool" data-card-widget="collapse">
                 <i className="fas fa-minus" />
@@ -20,9 +20,11 @@ function AddProduct() {
         {/* /.card-header */}
         <div className="card-body">
             <div className="row">
-            <div className="col-md-6">
+                <label>Product Name</label>
+                <input class="form-control" type="text" placeholder="Default input" aria-label="default input example"></input>
+            <div className="col-md-6 mt-3">
                 <div className="form-group">
-                <label>Minimal</label>
+                <label>Category</label>
                 <select className="form-control select2" style={{width: '100%'}}>
                     <option selected="selected">Alabama</option>
                     <option>Alaska</option>
@@ -33,10 +35,10 @@ function AddProduct() {
                     <option>Washington</option>
                 </select>
                 </div>
-                {/* /.form-group */}
+
                 <div className="form-group">
-                <label>Disabled</label>
-                <select className="form-control select2" disabled="disabled" style={{width: '100%'}}>
+                <label>Brand</label>
+                <select className="form-control select2" style={{width: '100%'}}>
                     <option selected="selected">Alabama</option>
                     <option>Alaska</option>
                     <option>California</option>
@@ -46,25 +48,14 @@ function AddProduct() {
                     <option>Washington</option>
                 </select>
                 </div>
-                {/* /.form-group */}
+                
             </div>
             {/* /.col */}
-            <div className="col-md-6">
-                <div className="form-group">
-                <label>Multiple</label>
-                <select className="select2" multiple="multiple" data-placeholder="Select a State" style={{width: '100%'}}>
-                    <option>Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
-                </select>
-                </div>
+            <div className="col-md-6 mt-3">
+                
                 {/* /.form-group */}
                 <div className="form-group">
-                <label>Disabled Result</label>
+                <label>SubCategory</label>
                 <select className="form-control select2" style={{width: '100%'}}>
                     <option selected="selected">Alabama</option>
                     <option>Alaska</option>
@@ -74,59 +65,49 @@ function AddProduct() {
                     <option>Texas</option>
                     <option>Washington</option>
                 </select>
+
                 </div>
+
+                
+                <label>Price</label>
+                <input class="form-control" type="text" placeholder="Enter Price" aria-label="default input example"></input>
                 {/* /.form-group */}
             </div>
             {/* /.col */}
             </div>
             {/* /.row */}
-            <h5>Custom Color Variants</h5>
+            
             <div className="row">
-            <div className="col-12 col-sm-6">
                 <div className="form-group">
-                <label>Minimal (.select2-danger)</label>
-                <select className="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" style={{width: '100%'}}>
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
-                </select>
+
+                    <div className="mb-3">
+                    <label htmlFor="formFile" className="form-label">Default file input example</label>
+                    <input className="form-control" style={{width:'100%'}} type="file" id="formFile" />
+                    </div>
                 </div>
-                {/* /.form-group */}
-            </div>
-            {/* /.col */}
-            <div className="col-12 col-sm-6">
-                <div className="form-group">
-                <label>Multiple (.select2-purple)</label>
-                <div className="select2-purple">
-                    <select className="select2" multiple="multiple" data-placeholder="Select a State" data-dropdown-css-class="select2-purple" style={{width: '100%'}}>
-                    <option>Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
-                    </select>
+                {/* <div className="col-12 col-sm-6">
+
                 </div>
+
+                <div className="col-12 col-sm-6">
+                    
+                </div> */}
+
+            </div>
+            <div className="row">
+                <div className="col-12 col-sm-6">
+                    <label>Product Size</label>
+                    <input class="form-control" type="text" placeholder="Enter Price" aria-label="default input example"></input>
                 </div>
-                {/* /.form-group */}
+                <div className="col-12 col-sm-6">
+                    <label>Product Color</label>
+                    <input class="form-control" type="text" placeholder="Enter Price" aria-label="default input example"></input>
+                </div>
             </div>
-            {/* /.col */}
-            </div>
-            {/* /.row */}
         </div>
-        {/* /.card-body */}
-        <div className="card-footer">
-            Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
-            the plugin.
+
+        <button type="submit" class="btn btn-primary m-3">Submit</button>
         </div>
-        </div>
-        {/* /.card */}
-        {/* SELECT2 EXAMPLE */}
     </div></section>
 
     )
