@@ -1,6 +1,14 @@
 import React from 'react'
 import Modal from './Modal'
 
+import {useEffect,useState} from 'react';
+import axios from 'axios';
+import {addCategory,setCategories,deleteCategroy,editCategory} from '../../srore/subcategorySlice'
+import {useDispatch,useSelector} from 'react-redux'
+import Moment from 'react-moment';
+import Loader from '../UI/Loader1'
+
+
 function SubCategory() {
     return (
     <div>

@@ -7,19 +7,26 @@ export const categorySlice = createSlice({
     categories:null,
   },
   reducers: {
-    setProducts: (state,{payload}) => {
+    setCategories: (state,{payload}) => {
       state.categories=payload;
     },
-    addProducts: (state,{payload}) => {
+    addCategory: (state,{payload}) => {
       state.categories.push(payload);
     },
-    deleteProducts: (state,{payload}) => {
+    editCategory: (state,{payload}) => {
+      state.categories.map(category=>{
+        if(category.id===payload.id)
+          category.name=payload.edit.name
+        return category
+       });
+    },
+    deleteCategroy: (state,{payload}) => {
       state.categories=state.categories.filter(p=>p.id!==payload);
     },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = categorySlice.actions
+export const { setCategories,addCategory,deleteCategroy,editCategory} = categorySlice.actions
 
 export default categorySlice.reducer
