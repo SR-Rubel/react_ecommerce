@@ -7,19 +7,27 @@ export const brandSlice = createSlice({
     brands:null,
   },
   reducers: {
-    setProducts: (state,{payload}) => {
+    setBrands: (state,{payload}) => {
       state.brands=payload;
     },
-    addProducts: (state,{payload}) => {
+    addBrand: (state,{payload}) => {
       state.brands.push(payload);
     },
-    deleteProducts: (state,{payload}) => {
+    deleteBrand: (state,{payload}) => {
       state.brands=state.brands.filter(p=>p.id!==payload);
     },
+    editBrand: (state,{payload}) => {
+      state.brands.map(brand=>{
+        if(brand.id===payload.id)
+          brand.name=payload.edit.name
+        return brand
+       });
+    },
+
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = brandSlice.actions
+export const { setBrands,addBrand,deleteBrand,editBrand } = brandSlice.actions
 
 export default brandSlice.reducer

@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const productSlice = createSlice({
   name: 'Products',
   initialState:{
-    products:null,
+    products:[],
   },
   reducers: {
     setProducts: (state,{payload}) => {
@@ -20,6 +20,6 @@ export const productSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = productSlice.actions
+export const { setProducts,addProducts,deleteProducts } = productSlice.actions
 
 export default productSlice.reducer

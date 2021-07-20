@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import {Provider} from 'react-redux'
-import store from './srore'
+import store from './store'
 import axios from 'axios'
 
 

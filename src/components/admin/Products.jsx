@@ -1,8 +1,51 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Modal from './Modal'
 
-function Products() {
+import {useEffect,useState} from 'react';
+import axios from 'axios';
+import {setProducts,deleteProducts} from '../../store/productSlice'
+import {useDispatch,useSelector} from 'react-redux'
+import Moment from 'react-moment';
+
+
+function Products(props) {
+
+    const dispatch=useDispatch();
+    const products=useSelector(state=>state.products.products)
+    console.log(products)
+
+    const deleteHandler=(e,id)=>{
+        e.preventDefault()
+        axios.delete('admin/delete-product/'+id)
+        .then(response=>{
+            console.log(response)
+            if(response.data.status==0){
+                dispatch(deleteProducts(id))
+            }
+        })
+        .catch(erorr=>{
+            console.log(erorr)
+        })
+    }
+
+    const editableHandler=()=>{
+
+    }
+
+    useEffect(()=>{
+
+         axios.get('/admin/all-product')
+        .then(response=>{
+            const data=response.data.data
+            if(response.data.status)
+               dispatch(setProducts(data))
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+    },[])
+
+
     return (
     <div>
     <section className="content-header">
@@ -26,51 +69,84 @@ function Products() {
         <div className="row">
             <div className="col-12">
             <div className="card">
-                <div className="card-header">
-                    Products list
-                </div>
-                {/* /.card-header */}
                 <div className="card-body">
-                <table id="example2" className="table table-bordered table-hover">
+                {
+                    products && (<table id="example2" className="table table-bordered table-hover">
                     <thead>
                     <tr>
-                        <th>Rendering engine</th>
-                        <th>Browser</th>
-                        <th>Platform(s)</th>
-                        <th>Engine version</th>
-                        <th>CSS grade</th>
+                        <th>Product id</th>
+                        <th>Product name</th>
+                        <th>Product category</th>
+                        <th>Product sub category</th>
+                        <th>Product brand</th>
+                        <th>image</th>
+                        <th>Product details</th>
+                        <th>Product size</th>
+                        <th>Product color</th>
+                        <th>price</th>
+                        <th>discount price</th>
+                        <th>stock</th>
+                        <th>by 1 get 1</th>
+                        <th>hot deal</th>
+                        <th>Created</th>
+                        <th>Updated</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                        Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                        <td>X</td>
-                    </tr>
-                    <tr>
-                        <td>Trident</td>
-                        <td>Internet
-                        Explorer 5.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td>5</td>
-                        <td>C</td>
-                    </tr>
+                        {
+                           products?.map(product=>{
+                                return <tr>
+                                    <td>{product.id}</td>
+                                    <td>{product.name}</td>
+                                    <td>{product.category_id}</td>
+                                    <td>{product.subcategory_id}</td>
+                                    <td>{product.brand}</td>
+                                    <td>{product.image}</td>
+                                    <td>{product.details}</td>
+                                    <td>{product.size}</td>
+                                    <td>{product.color}</td>
+                                    <td>{product.price}</td>
+                                    <td>{product.discout_price}</td>
+                                    <td>{product.stockout}</td>
+                                    <td>{product.by_one_get_one}</td>
+                                    <td>{product.hot_deal}</td>
+                                    <td> <Moment fromNow>{product.created_at}</Moment></td>
+                                    <td>
+                                    <Moment fromNow>{product.updated_at}</Moment> 
+                                    <button style={{marginLeft:"30px"}} className='btn btn-danger' onClick={e=>deleteHandler(e,product.id)}>delete</button>
+                                    <button 
+                                    style={{marginLeft:"30px"}} 
+                                    className='btn btn-primary' 
+                                    >edit</button>
+                                    </td>
+                                    </tr>
+                            })
+                        }
+                    
+
                     </tbody>
                     <tfoot>
                     <tr>
-                        <th>Rendering engine</th>
-                        <th>Browser</th>
-                        <th>Platform(s)</th>
-                        <th>Engine version</th>
-                        <th>CSS grade</th>
+                        <th>Product id</th>
+                        <th>Product name</th>
+                        <th>Product category</th>
+                        <th>Product sub category</th>
+                        <th>Product brand</th>
+                        <th>image</th>
+                        <th>Product details</th>
+                        <th>Product size</th>
+                        <th>Product color</th>
+                        <th>price</th>
+                        <th>discount price</th>
+                        <th>stock</th>
+                        <th>by 1 get 1</th>
+                        <th>hot deal</th>
+                        <th>Created</th>
+                        <th>Updated</th>
                     </tr>
                     </tfoot>
-                </table>
+                </table>)
+                }
                 </div>
             </div>
             </div>

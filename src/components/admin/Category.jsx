@@ -2,7 +2,7 @@ import React from 'react'
 import Modal from './Modal'
 import {useEffect,useState} from 'react';
 import axios from 'axios';
-import {addCategory,setCategories,deleteCategroy,editCategory} from '../../srore/categorySlice'
+import {addCategory,setCategories,deleteCategroy,editCategory} from '../../store/categorySlice'
 import {useDispatch,useSelector} from 'react-redux'
 import Moment from 'react-moment';
 import Loader from '../UI/Loader1'

@@ -9,6 +9,7 @@ import Category from '../components/admin/Category'
 import SubCategory from '../components/admin/SubCategory'
 import Products from '../components/admin/Products'
 import Dashboard from '../components/admin/Dashboard'
+import EditProduct from '../components/admin/EditProduct'
 
 function admin() {
     return (
@@ -21,6 +22,7 @@ function admin() {
                     <Route exact path='/categories' component={Category} />
                     <Route exact path='/sub-categories' component={SubCategory} />
                     <Route exact path='/add-product' component={AddProduct} />
+                    <Route exact path='/edit-product' component={EditProduct} />
                     <Route exact path='/products' component={Products} />
                     <Route exact path='/brand' component={Brand} />
                 </Switch>
