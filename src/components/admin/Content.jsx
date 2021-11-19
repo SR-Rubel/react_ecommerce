@@ -4,7 +4,7 @@ function Content(props) {
     return (
         
 
-       <div className="content-wrapper">
+  <div className="content-wrapper">
   {/* Content Header (Page header) */}
   <div className="content-header">
     <div className="container-fluid">
@@ -23,10 +23,10 @@ function Content(props) {
   </div>
   {/* /.content-header */}
   {/* Main content */}
-
-        {
-          props.children
-        }
+  
+    {
+      props.children
+    }
 </div>
 
 

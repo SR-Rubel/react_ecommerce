@@ -11,7 +11,10 @@ function Brand(props) {
     const [loading,setLoding]=useState(false);
     const [editable,setEditable]=useState('');
     const [edit,setEdit]=useState({});
+    const [added,setAdded]=useState(1);
+
     console.log("editable = ",editable);
+    console.log('added',added)
 
     console.log(edit)
     const dispatch = useDispatch();
@@ -42,6 +45,7 @@ function Brand(props) {
             if(response.data.status)
             {
                 dispatch(addBrand(data))
+                setAdded(0)
             }
         })
         .catch(error=>{
@@ -91,12 +95,12 @@ function Brand(props) {
             <h1>brands</h1>
             </div>
             <div className="col-sm-6">
-                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modal-default">
+                <button onClick={()=>{setAdded(1)}} type="button" className="btn btn-primary" data-toggle="modal" data-target="#modal-default">
                     Add New
                 </button>
 
 {/* ================modal=================================== */}
-                <div className="modal fade" id="modal-default">
+               <div className="modal fade" id="modal-default">
                     <div className="modal-dialog">
                         <div className="modal-content">
                         

@@ -1,0 +1,72 @@
+.top_product{
+    @include flexCenter;
+    @include respond(tab-port){
+        flex-direction: column;
+    }
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    height: 100%;
+    width: 100%;
+
+    &__left,
+    &__right{
+        @include flexCenter;
+    }
+    &__left{ 
+        p{
+            &:nth-child(1){
+                .img{
+                    height: 10rem;
+                    width: 10rem;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                }
+                font-size: 4rem;
+                font-weight: 500;
+                @include respond(615px){
+                    margin-left: 6rem;
+                }
+            }
+            &:nth-child(2){
+                margin-top: 5rem;
+                margin-left: -2rem;
+                font-size: 10rem;
+                @include respond(tab-port){
+                    font-size: 6rem;
+                }
+                // @include respond(756px){
+                //     font-size: 2rem;
+                // }
+                font-weight: 1000;
+
+                background-image: url(https://picsum.photos/200/300);
+                background-repeat: repeat;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    &__right{
+        &-img{
+            overflow: hidden;
+            border-radius: 1rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+        // &::after{
+        //     content:'';
+        //     background:$color-primary;
+        //     height: 50px;
+        //     width: 50px;
+        //     border-radius: 50%;
+        // }
+        // &::before{
+        //     content: '';
+        //     background:$color-primary;
+        //     height: 50px;
+        //     width: 50px;
+        //     border-radius: 50%;
+        // }
+    }
+}

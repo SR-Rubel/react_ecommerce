@@ -38,7 +38,7 @@ function Products(props) {
         .then(response=>{
             const data=response.data.data
             if(response.data.status)
-               dispatch(setProducts(data))
+               dispatch(setProducts(data.data))
         })
         .catch(error=>{
             console.log(error);

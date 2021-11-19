@@ -1,0 +1,105 @@
+.navbar{
+    background: transparent !important;
+    
+   
+
+    transition: 1s ease-in-out;
+    &-brand{
+        @include respond(992px){
+            z-index: 100;
+        }
+        letter-spacing: 0.5rem;
+        h2{
+            .img{
+                height: 10rem;
+                width: 10rem;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -100;
+            }
+            font-size: $font-large;
+            &:nth-child(1){
+                color:$color-primary;
+                // https://picsum.photos/id/237/200/300
+                // background-image: url(https://picsum.photos/id/55/500/100);
+                // background-repeat: repeat;
+                // -webkit-background-clip: text;
+                // -webkit-text-fill-color: transparent;
+
+                // font-size: 500px;
+            }
+            &:nth-child(2){
+                color:rgb(71, 6, 6);
+                margin-left: 4rem;
+                margin-top: -1.3rem;
+            }
+        }
+    }
+
+    &-nav{
+        @include respond(992px){
+            background: white !important;
+            padding-bottom: 3rem;
+            margin-top: -9rem !important;
+            margin-left: -0.455em !important;
+            width: 100vw;
+        }
+        li{
+            @include respond(992px){
+               text-align: center;
+            }
+            a{
+                font-size:$font-medium;
+                letter-spacing: .5rem;
+            }
+        }
+    }
+
+    .search{
+        display: flex;
+        &__input{
+            transition: .8s ease-in-out;
+            border: none;
+            height: 3rem;
+            width: 20rem;
+            font-size: 1.4rem;
+            // &::placeholder{
+            //     color:palegreen;
+            // }
+            &:focus{
+                border: .3rem solid $color-primary;
+                width: 23rem;
+                transform: scale(1.01);
+
+                // =====selecting adjacent html element======
+                // &+button{
+                //     transform: scale(1.2);
+                //     margin-left: 2.5rem;
+                // }
+            }
+            &::spelling-error{
+                border-bottom: 2rem solid red;
+            }
+        }
+        &__button{
+            transition: 1s;
+            border: none;
+            background: transparent;
+            svg{
+                color:$color-primary;
+            }
+        }
+    }
+    &-toggler{
+        @include respond(992px){
+           z-index: 100;
+        }
+        color:$color-primary !important;
+      
+        // &-icon {
+        // }
+    }
+
+    animation: fadeIn 1s ease-in-out;
+}
