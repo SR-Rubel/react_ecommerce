@@ -6,7 +6,7 @@ import UserProfile from '../components/user/UserProfile'
 function User() {
     return (
         <Switch>
-            <Route exact path='/home' component={Home} />
+            <Route exact path='/' component={Home} />
             <Route exact path='/user/profile' component={UserProfile} />
         </Switch>
     )
