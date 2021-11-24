@@ -1,0 +1,16 @@
+.cart{
+    &__products{
+        hr{
+            height: 3px;
+            width: 80%;
+            color:$color-primary
+        }
+    }
+    &__product{
+        h1{ color:rgb(51, 119, 51); }
+        h2{ color:$color-primary; }
+
+        letter-spacing: 2px;
+        width: 70vw;
+    }
+}

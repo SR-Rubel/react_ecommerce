@@ -4,9 +4,8 @@ import './index.scss';
 // -------------bootstrap--------------
 import 'bootstrap/dist/js/bootstrap.min'
 import 'bootstrap/dist/css/bootstrap.min.css'
-// import '@popperjs/core'
-// /dist/js/bootstrap.esm.js
 // -------------bootstrap--------------
+import './scss/main.scss'
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';

@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../Basic_component/Footer'
 import Navbar from './Navbar'
 import BrandsHome from './support_component/BrandsHome'
 import Header from './support_component/Header'
@@ -13,6 +14,7 @@ function Home() {
         </div>
             <TopProductSlider />
         <BrandsHome />
+        <Footer />
         </>
     )
 }

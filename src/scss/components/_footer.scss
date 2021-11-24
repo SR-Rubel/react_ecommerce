@@ -1,0 +1,13 @@
+.footer{
+    letter-spacing: 2px;
+    background: #3f503f;
+    color:white;
+    //dark color
+    //#5c665c
+    //#465046
+    //#3f503f
+
+    &__about,&__contact,&__help{
+        padding: 5rem
+    }
+}

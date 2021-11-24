@@ -1,0 +1,15 @@
+.responsive_image{
+    width: 400px;
+    height: 20vh;
+
+    background: rgb(177, 89, 89);
+    // img{
+    //     width: auto;
+    //     height: 20vh;
+    // }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    
+}

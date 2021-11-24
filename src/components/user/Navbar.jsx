@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../../img/leaf1.png'
+import {Link} from 'react-router-dom'
 
 function Navbar() {
     return (
@@ -15,10 +16,10 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Categories</a>
+                <Link className="nav-link" to="/shop">Shop</Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">Organic</a>
