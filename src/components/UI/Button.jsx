@@ -1,12 +1,12 @@
 import React from 'react'
 
 function Button({
-    text="button",
     cls="btn-outline-primary",
     width= "",
     height="",
     bgcolor="",
     color="",
+    children
 }) {
 
     const style={
@@ -18,7 +18,7 @@ function Button({
 
     return (
         <button className={"btn "+cls} style={style}>
-            {text}
+            {children}
         </button>
     )
 }

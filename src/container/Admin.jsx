@@ -11,20 +11,20 @@ import Products from '../components/admin/Products'
 import Dashboard from '../components/admin/Dashboard'
 import EditProduct from '../components/admin/EditProduct'
 
-function admin() {
+function Admin() {
     return (
         <div className="wrapper">
             <Navbar />
             <Sidebar />
             <Content >
                 <Switch>
-                    <Route exact path='/dashboard' component={Dashboard} />
-                    <Route exact path='/categories' component={Category} />
-                    <Route exact path='/sub-categories' component={SubCategory} />
-                    <Route exact path='/add-product' component={AddProduct} />
-                    <Route exact path='/edit-product' component={EditProduct} />
-                    <Route exact path='/products' component={Products} />
-                    <Route exact path='/brand' component={Brand} />
+                    <Route exact path='/admin/dashboard' component={Dashboard} />
+                    <Route exact path='/admin/categories' component={Category} />
+                    <Route exact path='/admin/sub-categories' component={SubCategory} />
+                    <Route exact path='/admin/add-product' component={AddProduct} />
+                    <Route exact path='/admin/edit-product' component={EditProduct} />
+                    <Route exact path='/admin/products' component={Products} />
+                    <Route exact path='/admin/brand' component={Brand} />
                 </Switch>
                 {/* <Modal details="add category" /> */}
             </Content>
@@ -32,4 +32,4 @@ function admin() {
     )
 }
 
-export default admin
+export default Admin

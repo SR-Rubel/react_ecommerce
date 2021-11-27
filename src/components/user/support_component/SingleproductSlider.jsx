@@ -82,7 +82,7 @@ function SingleproductSlider() {
                     slides={slides}
                         />
             </div>
-            <div className="sproduct__imgslider--pager">
+            <div className="sproduct__imgslider--pager ml-5 pl-5">
                 
                 <Slickslider
                     setting={{

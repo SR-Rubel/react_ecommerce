@@ -35,17 +35,16 @@ function SingleProduct(
 
                     <div className="d-flex flex-column  mt-4 sproduct__right--btn">
                         <div className="d-flex">
-                            <Button text="Add to cart" />
+                            <Button>Add to cart</Button>
                             <Button 
                             text="Add to wishlist" 
                             cls="btn-outline-success ml-5"
-                            />
+                            >Add to wishlist</Button>
                         </div>
                         <Button 
-                            text="order now" 
                             cls="btn-outline-success mt-4"
                             width="50%"
-                        />
+                        >Order now</Button>
                     </div>
 
                     <div className="sproduct__right--details">

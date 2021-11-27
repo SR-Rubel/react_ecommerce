@@ -14,8 +14,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <Admin /> */}
         <User />
+        {/* <Admin /> */}
       </Router>
     </div>
   );

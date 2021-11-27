@@ -5,7 +5,7 @@ import './index.scss';
 import 'bootstrap/dist/js/bootstrap.min'
 import 'bootstrap/dist/css/bootstrap.min.css'
 // -------------bootstrap--------------
-import './scss/main.scss'
+
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';

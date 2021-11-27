@@ -19,7 +19,7 @@ function Products(props) {
         axios.delete('admin/delete-product/'+id)
         .then(response=>{
             console.log(response)
-            if(response.data.status === 0){
+            if(response.data.status=== 0){
                 dispatch(deleteProducts(id))
             }
         })
