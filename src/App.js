@@ -14,8 +14,10 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <User />
-        {/* <Admin /> */}
+        <Admin />
+        <div className="user_container">
+          <User />
+        </div>
       </Router>
     </div>
   );

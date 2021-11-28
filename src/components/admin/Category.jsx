@@ -6,6 +6,7 @@ import {addCategory,setCategories,deleteCategroy,editCategory} from '../../store
 import {useDispatch,useSelector} from 'react-redux'
 import Moment from 'react-moment';
 import Loader from '../UI/Loader1'
+import AdminContainer from './AdminContainer';
 
 function Category(props) {
 
@@ -86,8 +87,8 @@ function Category(props) {
     }
 
     return (
-    <div>
-    <section className="content-header">
+    <AdminContainer>
+        <section className="content-header">
         <div className="container-fluid">
         <div className="row mb-2">
             <div className="col-sm-6">
@@ -188,8 +189,7 @@ function Category(props) {
         
         </div>
     </section>
-    </div>
- 
+    </AdminContainer>
 
     )
 }

@@ -1,9 +1,11 @@
 import React from 'react'
+import AdminContainer from './AdminContainer'
 import Card from './Card'
 
 function Dashboard(props) {
     return (
       
+    <AdminContainer>
     <div className="container-fluid">
       <div className="row">
         <Card icon={<i className="ion ion-arrow-graph-up-right" />} bg="bg-info" />
@@ -12,6 +14,7 @@ function Dashboard(props) {
         <Card icon={<i className="ion ion-leaf" />} bg="bg-dark" />
       </div>
     </div>
+    </AdminContainer>
 
     )
 }

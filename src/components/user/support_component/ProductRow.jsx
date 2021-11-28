@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ProductCard from '../../Basic_component/ProductCard'
 
 
@@ -6,13 +7,15 @@ function ProductRow() {
     return (
         <div className="row">
             <div className="d-flex flex-row flex-wrap justify-content-around">
-                <ProductCard 
-                img="/img/carrotjuice.png" 
-                productCat="demo"
-                productTitle="demo title"
-                price="$200"
-                btn1="Add to cart"
-                btn2="Add to wishlist" />
+                <Link to="/single-product">
+                    <ProductCard 
+                    img="/img/carrotjuice.png" 
+                    productCat="demo"
+                    productTitle="demo title"
+                    price="$200"
+                    btn1="Add to cart"
+                    btn2="Add to wishlist" />
+                </Link>
                 <ProductCard 
                 img="/img/juice.png" 
                 productCat="demo"

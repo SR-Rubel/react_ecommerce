@@ -6,6 +6,7 @@ import {setCategories} from '../../store/categorySlice'
 import {setSubCategories} from '../../store/subcategorySlice'
 import {setBrands} from '../../store/brandSlice'
 import { addProducts } from '../../store/productSlice'
+import AdminContainer from './AdminContainer'
 
 function AddProduct(props) {
 
@@ -89,19 +90,22 @@ function AddProduct(props) {
     }
 
     return (
+    
+        <AdminContainer>
+
     <section className="content">
-        <div className="container-fluid">
-            <div className="card card-default">
-                <div className="card-header">
-                    <h3 className="card-title">Add Product</h3>
-                    <div className="card-tools">
-                    <button type="button" className="btn btn-tool" data-card-widget="collapse">
-                        <i className="fas fa-minus" />
-                    </button>
-                    <button type="button" className="btn btn-tool" data-card-widget="remove">
-                        <i className="fas fa-times" />
-                    </button>
-                </div>
+    <div className="container-fluid">
+        <div className="card card-default">
+            <div className="card-header">
+                <h3 className="card-title">Add Product</h3>
+                <div className="card-tools">
+                <button type="button" className="btn btn-tool" data-card-widget="collapse">
+                    <i className="fas fa-minus" />
+                </button>
+                <button type="button" className="btn btn-tool" data-card-widget="remove">
+                    <i className="fas fa-times" />
+                </button>
+            </div>
 
 {/* =========== product name input=========== */}
     <div className="card-body">
@@ -229,6 +233,8 @@ function AddProduct(props) {
         </div>
         </div>
     </section>
+    
+        </AdminContainer>
 
     )
 }

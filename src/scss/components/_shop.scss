@@ -4,6 +4,10 @@
 
     &__body{
         margin-top:20rem;
+        a{
+            text-decoration: none;
+            color: black;
+        }
     }
     &__sidebar{
         width: 25rem;

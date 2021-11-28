@@ -1,8 +1,11 @@
 import React from 'react'
+import AdminContainer from './AdminContainer'
 
 function Datatable() {
     return (
-    <div>
+    
+        <AdminContainer>
+            
     <section className="content-header">
         <div className="container-fluid">
         <div className="row mb-2">
@@ -77,8 +80,8 @@ function Datatable() {
         
         </div>
     </section>
-    
-    </div>
+
+        </AdminContainer>
  
 
     )

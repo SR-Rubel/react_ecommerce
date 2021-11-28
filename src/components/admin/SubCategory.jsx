@@ -8,6 +8,7 @@ import {setCategories} from '../../store/categorySlice'
 
 import {useDispatch,useSelector} from 'react-redux'
 import Moment from 'react-moment';
+import AdminContainer from './AdminContainer';
 
 
 
@@ -101,8 +102,8 @@ function SubCategory() {
     }
 
     return (
-    <div>
-    <section className="content-header">
+    <AdminContainer>
+        <section className="content-header">
         <div className="container-fluid">
         <div className="row mb-2">
             <div className="col-sm-6">
@@ -214,7 +215,7 @@ function SubCategory() {
         
         </div>
     </section>
-    </div>
+    </AdminContainer>
  
 
     )

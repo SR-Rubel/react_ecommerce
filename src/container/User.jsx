@@ -9,7 +9,7 @@ import Test from '../components/Test'
 import Cart from '../components/user/Cart'
 import Wishlist from '../components/user/Wishlist'
 import Order from '../components/user/Order'
-import Admin from './Admin'
+import OrderConfirmation from '../components/user/OrderConfirmation'
 
 function User() {
 
@@ -23,7 +23,7 @@ function User() {
             <Route exact path='/user/cart' component={Cart} />
             <Route exact path='/user/wishlist' component={Wishlist} />
             <Route exact path='/user/order' component={Order} />
-            <Route exact path='/admin' component={Admin} />
+            <Route exact path='/user/order-confirmation' component={OrderConfirmation} />
 
             {/* -------------test path---------- */}
             <Route exact path='/test' component={Test} />

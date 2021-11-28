@@ -4,6 +4,7 @@ import axios from 'axios';
 import {addBrand,setBrands,deleteBrand,editBrand} from '../../store/brandSlice'
 import {useDispatch,useSelector} from 'react-redux'
 import Moment from 'react-moment';
+import AdminContainer from './AdminContainer';
 
 function Brand(props) {
 
@@ -87,7 +88,8 @@ function Brand(props) {
     }
 
     return (
-    <div>
+    
+        <AdminContainer>
     <section className="content-header">
         <div className="container-fluid">
         <div className="row mb-2">
@@ -189,8 +191,7 @@ function Brand(props) {
         
         </div>
     </section>
-    </div>
- 
+        </AdminContainer>
 
     )
 }

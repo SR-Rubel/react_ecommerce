@@ -1,8 +1,10 @@
 import React from 'react'
+import AdminContainer from './AdminContainer'
 
 function EditProduct() {
     return (
-        <section className="content">
+    <AdminContainer>
+    <section className="content">
     <div className="container-fluid">
         {/* SELECT2 EXAMPLE */}
         <div className="card card-default">
@@ -109,6 +111,7 @@ function EditProduct() {
         <button type="submit" class="btn btn-primary m-3">Submit</button>
         </div>
     </div></section>
+    </AdminContainer>
 
     )
 }

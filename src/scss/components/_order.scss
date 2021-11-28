@@ -1,0 +1,31 @@
+.order{
+    @include navbarStyle;
+    &__body{
+        margin-top: 10rem;
+        @include respond("970px"){
+            flex-direction: column;
+            align-content: center;
+            align-items:center
+        }
+    }
+    &__left{
+        @include respond("970px"){
+
+            width: 74.666667%;
+        }
+        .nav-item{
+            a{
+                color:rgb(44, 139, 92);
+            }
+            .active{
+                background: rgb(88, 145, 126);
+            }
+        }
+    }
+    &__right{
+        &-product{
+            max-height: 70vh;
+            overflow: auto;
+        }
+    }
+}

@@ -9,9 +9,9 @@ function ShopSidebar() {
                         <div className="fw-bold">Brand</div>
                     </div>
                     <select className="w-50 ml-auto" name="" id="">
-                        <option>option 1</option>
-                        <option>option 2</option>
-                        <option>option 3</option>
+                        <option>name 1</option>
+                        <option>name 2</option>
+                        <option>name 3</option>
                     </select>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-start">
@@ -19,9 +19,9 @@ function ShopSidebar() {
                         <div className="fw-bold">Categories</div>
                     </div>
                     <select className="w-50 ml-auto" name="" id="">
-                        <option>option 1</option>
-                        <option>option 2</option>
-                        <option>option 3</option>
+                        <option>Juice</option>
+                        <option>fruits</option>
+                        <option>Organic Food</option>
                     </select>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-start">

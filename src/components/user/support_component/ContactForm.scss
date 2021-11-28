@@ -1,0 +1,32 @@
+
+.contact{
+    .form-control{
+        border:none;
+        border-bottom: 2px solid rgb(49, 95, 49);
+        display: block;
+        font-size: 1.5rem;
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(rgb(28, 34, 28), .1);
+            border-bottom: 3px solid rgb(37, 58, 37);
+        }
+        &::placeholder{
+            letter-spacing: .1rem;
+        }
+
+        // &:focus:invalid {
+        //     border-bottom: 3px solid rgb(49, 95, 49);
+        // }
+    }
+    label{
+        letter-spacing: .2rem;
+    }
+    button{
+        background:rgb(58, 95, 58);
+        font-size: 1.5rem;
+        width: 10rem;
+        &:hover{
+            background: rgb(37, 58, 37);
+        }
+    }
+}

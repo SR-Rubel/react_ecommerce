@@ -6,6 +6,7 @@ import axios from 'axios';
 import {setProducts,deleteProducts} from '../../store/productSlice'
 import {useDispatch,useSelector} from 'react-redux'
 import Moment from 'react-moment';
+import AdminContainer from './AdminContainer';
 
 
 function Products(props) {
@@ -47,7 +48,7 @@ function Products(props) {
 
 
     return (
-    <div>
+    <AdminContainer>
     <section className="content-header">
         <div className="container-fluid">
         <div className="row mb-2">
@@ -155,9 +156,7 @@ function Products(props) {
         
         </div>
     </section>
-    
-    </div>
- 
+    </AdminContainer>
 
     )
 }
