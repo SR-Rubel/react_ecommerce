@@ -86,23 +86,23 @@ export default function Order() {
                     {/* =====tab 1===== */}
                     <div class="tab-pane fade show active" id="pills-bd" role="tabpanel" aria-labelledby="pills-bdpayment-tab">
                         <ul className="d-flex flex-column flex-sm-row justify-content-around">
-                            {/* ----------------payment method images for international----------- */}
-                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/juice.png"} alt="" width="200px" /> </a></li>
-                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/juice.png"} alt="" width="200px" /> </a></li>
-                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/juice.png"} alt="" width="200px" /> </a></li>
-                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/juice.png"} alt="" width="200px" /> </a></li>
+                           
+                            {/* ------------------payment mehtod images for bangladesh---------------- */}
+                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/bkash.png"} alt="" width="200px" /> </a></li>
+                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/nagad.png"} alt="" width="200px" /> </a></li>
+                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/rocket.png"} alt="" width="200px" /> </a></li>
+                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/surecash.svg"} alt="" width="200px" /> </a></li>
 
                         </ul>
                     </div>
                     {/* ========tab 2======= */}
                     <div class="tab-pane fade" id="pills-other" role="tabpanel" aria-labelledby="pills-otherpayment-tab">
                         <ul className="d-flex flex-column flex-sm-row justify-content-around">
-                            {/* ------------------payment mehtod images for bangladesh---------------- */}
-                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/juice2.png"} alt="" width="200px" /> </a></li>
-                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/juice2.png"} alt="" width="200px" /> </a></li>
-                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/juice2.png"} alt="" width="200px" /> </a></li>
-                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/juice2.png"} alt="" width="200px" /> </a></li>
-
+                             {/* ----------------payment method images for international----------- */}
+                             <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/juice.png"} alt="" width="200px" /> </a></li>
+                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/juice.png"} alt="" width="200px" /> </a></li>
+                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/juice.png"} alt="" width="200px" /> </a></li>
+                            <li><a href="#"> <img src={process.env.PUBLIC_URL+ "/img/juice.png"} alt="" width="200px" /> </a></li>
                         </ul>
                     </div>
 

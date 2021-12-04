@@ -1,10 +1,21 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Footer from '../Basic_component/Footer'
 import Navbar from './Navbar'
 import ProductRow from './support_component/ProductRow'
 import ShopSidebar from './support_component/ShopSidebar'
+import DynamicTitle from '../UI/DynamicTitle'
+import axios from 'axios'
 
 function Shop() {
+
+    useEffect(() => {
+        DynamicTitle({
+            title:"shop",
+            metaDescription:'This is main shop page of this ecommerce'
+        })
+
+    }, [])
+
     return (
         <div className="shop">
             <Navbar />
@@ -19,6 +30,7 @@ function Shop() {
             <Footer />
         </div>
     )
+    
 }
 
 export default Shop

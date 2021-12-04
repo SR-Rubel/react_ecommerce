@@ -19,7 +19,7 @@ function AddProduct(props) {
     useEffect(()=>{
         //load categories
 
-        axios.get('/admin/list-category')
+        axios.get('/list-category')
         .then(response=>{
             const data=response.data.data
             if(response.data.status)
@@ -31,7 +31,7 @@ function AddProduct(props) {
 
         // load sub categories
 
-        axios.get('/admin/list-subcategories')
+        axios.get('/list-subcategories')
         .then(response=>{
             const data=response.data.data
             if(response.data.status)
@@ -43,7 +43,7 @@ function AddProduct(props) {
 
         //load brands
 
-        axios.get('/admin/brand-list')
+        axios.get('/brand-list')
         .then(response=>{
             const data=response.data.data
             if(response.data.status)
@@ -69,6 +69,7 @@ function AddProduct(props) {
         data.append('name',product.name)
         data.append('category_id',product.category_id)
         data.append('subcategory_id',product.subcategory_id)
+        data.append('brand_id',product.brand_id)
         data.append('size',product.size)
         data.append('price',product.price)
         data.append('details',product.details)

@@ -23,7 +23,7 @@ function Brand(props) {
     console.log(brands);
 
     useEffect(()=>{
-         axios.get('/admin/brand-list')
+         axios.get('/brand-list')
         .then(response=>{
             const data=response.data.data
             if(response.data.status)

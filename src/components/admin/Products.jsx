@@ -35,7 +35,7 @@ function Products(props) {
 
     useEffect(()=>{
 
-         axios.get('/admin/all-product')
+         axios.get('/all-product')
         .then(response=>{
             const data=response.data.data
             if(response.data.status)
@@ -114,10 +114,14 @@ function Products(props) {
                                     <td> <Moment fromNow>{product.created_at}</Moment></td>
                                     <td>
                                     <Moment fromNow>{product.updated_at}</Moment> 
-                                    <button style={{marginLeft:"30px"}} className='btn btn-danger' onClick={e=>deleteHandler(e,product.id)}>delete</button>
+                                    <button 
+                                    style={{marginLeft:"30px"}} className='btn btn-danger' 
+                                    onClick={e=>deleteHandler(e,product.id)}
+                                    >delete</button>
                                     <button 
                                     style={{marginLeft:"30px"}} 
                                     className='btn btn-primary' 
+                                    onClick={()=>{props.history.push("/edit-product/"+product.id)}}
                                     >edit</button>
                                     </td>
                                     </tr>

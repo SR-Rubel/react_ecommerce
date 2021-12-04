@@ -18,7 +18,7 @@ function User() {
         <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/shop' component={Shop} />
-            <Route exact path='/single-product' component={SingleProduct} />
+            <Route exact path='/single-product/:id' component={SingleProduct} />
             <Route exact path='/user/profile' component={UserProfile} />
             <Route exact path='/user/cart' component={Cart} />
             <Route exact path='/user/wishlist' component={Wishlist} />

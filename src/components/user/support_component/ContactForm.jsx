@@ -17,14 +17,17 @@ function ContactForm() {
                 </div>
                 
             </div>
-            <div class="form-group my-5">
-                <label for="inputAddress">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
+            <div className="form row my-5">
+                <div class="form-group col-md-6">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
+                </div>
+                <div class="form-group col-md-6 mt-5 mt-md-0">
+                    <label for="inputAddress2">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+                </div>
             </div>
-            <div class="form-group my-5">
-                <label for="inputAddress2">Address 2</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
-            </div>
+
             <div class="form row my-5">
                 <div class="form-group col-md-6">
                 <label for="inputCity">City</label>
@@ -42,6 +45,14 @@ function ContactForm() {
                 <input type="text" class="form-control" id="inputZip" />
                 </div>
             </div>
+
+            <div className="form row my-5">
+                <div class="form-group col-md-6">
+                    <label for="inputAddress">Phone</label>
+                    <input type="text" class="form-control" id="inputPhone" placeholder="+8801831767309" />
+                </div>
+            </div>
+
             <div class="form-group mt-3">
                 <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="gridCheck" />

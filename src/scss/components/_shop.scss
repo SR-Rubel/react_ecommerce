@@ -10,11 +10,26 @@
         }
     }
     &__sidebar{
-        width: 25rem;
+        width: 27rem;
         margin-top:2rem;
+        letter-spacing: .1rem;
         @include respond(768px){
             width: 75vw;
             margin-bottom: 2rem;
+        }
+        select{
+            border:none;
+            border-bottom: 2px solid rgb(49, 95, 49);
+            display: block;
+            font-size: 1.5rem;
+            &:focus {
+                outline: none;
+                box-shadow: 0 1rem 2rem rgba(rgb(28, 34, 28), .1);
+                border-bottom: 3px solid rgb(37, 58, 37);
+            }
+            &::placeholder{
+                letter-spacing: .1rem;
+            }
         }
     }
     &__product{

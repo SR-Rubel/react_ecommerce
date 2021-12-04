@@ -28,7 +28,7 @@ function SubCategory() {
 
     useEffect(()=>{
 
-        axios.get('/admin/list-category')
+        axios.get('/list-category')
         .then(response=>{
             const data=response.data.data
             if(response.data.status)
@@ -38,7 +38,7 @@ function SubCategory() {
             console.log(error);
         })
 
-         axios.get('/admin/list-subcategories')
+         axios.get('/list-subcategories')
         .then(response=>{
             const data=response.data.data
             if(response.data.status)
