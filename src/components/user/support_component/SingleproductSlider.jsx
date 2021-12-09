@@ -7,22 +7,22 @@ import { useEffect } from 'react';
 function SingleproductSlider() {
     const slides=[
         <ProductCard 
-                img="/img/juice4.png" 
+                img="/img/1.png" 
                  />,
         <ProductCard 
-                img="/img/juice.png" 
+                img="/img/2.png" 
                  />,
          <ProductCard 
                 img="/img/carrotjuice.png" 
                  />,
          <ProductCard 
-                img="/img/juice.png" 
+                img="/img/2.png" 
                  />,
          <ProductCard 
-                img="/img/carrotjuice.png" 
+                img="/img/4.png" 
                 />,
          <ProductCard 
-                img="/img/carrotjuice.png" 
+                img="/img/5.png" 
                  />,
          <ProductCard 
                 img="/img/carrotjuice.png" 

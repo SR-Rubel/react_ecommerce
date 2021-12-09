@@ -6,7 +6,8 @@ function Button({
     height="",
     bgcolor="",
     color="",
-    children
+    children,
+    onclick
 }) {
 
     const style={
@@ -17,7 +18,7 @@ function Button({
     }
 
     return (
-        <button className={"btn "+cls} style={style}>
+        <button onClick={onclick} className={"btn "+cls} style={style}>
             {children}
         </button>
     )

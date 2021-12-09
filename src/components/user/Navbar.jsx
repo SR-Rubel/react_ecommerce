@@ -27,6 +27,19 @@ function Navbar() {
     
             </ul>
             <form className="d-flex">
+
+              <div className="cart-icon d-flex">
+
+                <div className="cart-icon-basket">
+                  <div className="cart-icon-basket-badge text-center">2</div>
+                  <i class="bi bi-cart"></i>
+                </div>
+                <div className="cart-icon-heart">
+                  <div className="cart-icon-heart-badge text-center">2</div>
+                  <i class="bi bi-heart"></i>
+                </div>
+              </div>
+
               <div className="search">
                 <input className="form-control me-2 search__input" type="search" placeholder="Search" aria-label="Search" />
                 <button className="search__button" type="submit">

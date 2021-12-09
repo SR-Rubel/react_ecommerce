@@ -90,7 +90,44 @@
                 color:$color-primary;
             }
         }
+
+        
     }
+
+    .cart-icon{
+        margin-right: 1rem;
+        i{
+            font-size: 2rem;
+            padding:2rem;
+            // color: $color-primary;
+        }
+        // &-basket{
+        //     position: relative;
+        //     &-badge{
+        //         display: inline;
+        //         background: $color-primary;
+        //         position: absolute;
+        //         height: 20px;
+        //         width: 20px;
+        //         border-radius: 50%;
+        //         top:0;
+        //         left:7px;
+        //     }
+        // }
+        &-heart,&-basket{
+            position: relative;
+            &-badge{
+                display: inline;
+                background: $color-primary;
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                right:1px;
+            }
+        }
+    }
+
     &-toggler{
         @include respond(992px){
            z-index: 100;

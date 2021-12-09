@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+ import React,{useEffect,useState} from 'react'
 import axios from 'axios'
 
 import { setCategories } from '../../../store/categorySlice';
@@ -9,6 +9,17 @@ import { useDispatch,useSelector } from 'react-redux';
 
 function ShopSidebar() {
     const dispatch = useDispatch();
+    const [checked, setChecked] = useState(true)
+    var [product_initial, setproduct_initial] = useState()
+
+    // redux states
+    const categories=useSelector(state=>state.categories.categories);
+    const brands=useSelector(state=>state.brands.brands);
+    const subcategories=useSelector(state=>state.subcategories.subcategories);
+    const products=useSelector(state=>state.userProducts.userProducts)
+    // const products=useSelector(state=>state.userProducts.userProducts)
+    
+    // products requrest
     const request=(url,actionFunc)=>{
         axios.get(url)
         .then(response=>{
@@ -26,22 +37,21 @@ function ShopSidebar() {
 
     }, [])
 
-    const categories=useSelector(state=>state.categories.categories);
-    const brands=useSelector(state=>state.brands.brands);
-    const subcategories=useSelector(state=>state.subcategories.subcategories);
-    const products=useSelector(state=>state.userProducts.userProducts)
+    
 
+    console.log("=======bal====",product_initial)
+
+    // products by defferent categories, sub_categories and brand
     const By=(e,url1st,url2nd)=>{
         e.preventDefault();
         const index=e.target.selectedIndex
         const element=e.target.childNodes[index]
         const id=element.getAttribute('id')
-        // console.log(id)
         axios.get(url1st+id+url2nd)
         .then(response=>{
             response=response.data;
             dispatch(setProducts(response))
-            // console.log(response)
+            setproduct_initial(products);
         })
         .catch(error=>{
             console.log(error);
@@ -58,17 +68,43 @@ function ShopSidebar() {
     const selectSubcategoryHandler=(e)=>{
         By(e,"sub-category/","/products")
     }
+    
+    
+    //filtering product by price
     const priceWise=(e)=>{
         e.preventDefault()
         const maxPrice=e.target.value;
-        console.log(maxPrice);
-        const filteredProducts=products.filter(item=>{
-            const price=parseInt(item.price);
-            console.log(price)
+        const filteredProducts=product_initial?.filter(item=>{
+            return item.price<maxPrice;
         })
         console.log(filteredProducts)
-        dispatch(setProducts(products))
-        dispatch(setProducts(filteredProducts)) //wrong logic
+        dispatch(setProducts(filteredProducts))
+        console.log("===initial=====",product_initial)
+    }
+
+    // alphabeic sorting
+
+    const AlpabeticHanler=(e)=>{
+        setChecked(!checked)
+        var productTemp=[...products];
+        var productTemp1=[...products];
+        const alphbetic_sorted=productTemp.sort((first,second)=>{
+            if(first.name<second.name) return -1;
+            if(first.name>second.name) return 1;
+            else return 0;
+        })
+        const id_wise_sorted=productTemp1.sort((first,second)=>{
+            if(first.id<second.id) return -1;
+            if(first.id>second.id) return 1;
+            else return 0;
+        })
+        checked?dispatch(setProducts(alphbetic_sorted)):dispatch(setProducts(id_wise_sorted));
+
+        console.log(alphbetic_sorted)
+        console.log(id_wise_sorted)
+
+        // checked?console.log("unchecked"):console.log("checked");
+
     }
 
     return (
@@ -113,6 +149,12 @@ function ShopSidebar() {
                 <p style={{letterSpacing:'.5rem'}}>Price: </p>
                 <input type="range" min="50" max="100" class="slider" id="myRange" 
                 onChange={(e)=>{priceWise(e)}}
+                />
+            </div>
+            <div className="d-flex mt-5 justify-content-center align-items-center p-3">
+                <p style={{letterSpacing:'.3rem',margin:".4rem"}}>Alphabetic sort: </p>
+                <input type="checkbox"
+                onChange={(e)=>{AlpabeticHanler(e)}}
                 />
             </div>
         </div>

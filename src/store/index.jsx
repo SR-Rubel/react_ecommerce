@@ -4,6 +4,8 @@ import categoryReducer from './categorySlice';
 import subcategoryReducer from './subcategorySlice';
 import brandReducer from './brandSlice';
 import userProductReducer from './userProductSlice';
+import cartReducer from './cartSlice';
+import wishlistReducer from './wishlistSlice';
 
 export default configureStore({
   reducer: {
@@ -12,6 +14,8 @@ export default configureStore({
       subcategories:subcategoryReducer,
       brands:brandReducer,
       userProducts:userProductReducer,
+      cart:cartReducer,
+      wishlist:wishlistReducer,
 
   },
 })
