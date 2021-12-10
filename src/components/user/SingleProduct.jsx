@@ -16,8 +16,7 @@ function SingleProduct(
         category = "category name",
         subCategory= "sub category name",
         price="$200",
-        details= "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel earum quas reiciendis voluptatem, vero, beatae magni illo nihil expedita ipsum similique sunt deleniti! Corporis volupta
-        tes quis quia explicabo ipsum!",
+        details= "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel earum quas reiciendis voluptatem, vero, beatae magni illo nihil expedita ipsum similique sunt deleniti! Corporis voluptates quis quia explicabo ipsum!",
         match
     }
 ) {
